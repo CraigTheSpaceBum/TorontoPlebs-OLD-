@@ -1,6 +1,4 @@
 function loadContent(page) {
-    // You can customize this function based on your needs
-    // For now, let's just display a message for each page
     let content = '';
 
     switch (page) {
@@ -17,8 +15,9 @@ function loadContent(page) {
             content = 'Discover upcoming EVENTS!';
             break;
         case 'nostr':
-            content = 'NOSTR content is here!';
-            break;
+            // Redirect to an external link for NOSTR
+            window.location.href = 'https://njump.me/@torontoplebs.ca';
+            return;
         default:
             content = 'Page not found!';
     }
