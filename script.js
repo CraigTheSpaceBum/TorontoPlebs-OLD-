@@ -1,18 +1,14 @@
-function loadContent(page) {
+async function loadContent(page) {
     let content = '';
 
     switch (page) {
         case 'home':
-            content = 'Welcome to the HOME page!';
-            break;
         case 'news':
-            content = 'Check out the latest NEWS!';
-            break;
         case 'interviews':
-            content = 'Explore our INTERVIEWS section!';
-            break;
         case 'events':
-            content = 'Discover upcoming EVENTS!';
+            // Load internal content
+            const response = await fetch(page + '.html');
+            content = await response.text();
             break;
         case 'nostr':
             // Redirect to an external link for NOSTR
