@@ -4,7 +4,7 @@ async function loadContent(page) {
     switch (page) {
         case 'home':
             // Load the index.html for the home page
-            const indexResponse = await fetch('index.html');
+            const indexResponse = await fetch('home.html');
             content = await indexResponse.text();
             break;
         case 'news':
