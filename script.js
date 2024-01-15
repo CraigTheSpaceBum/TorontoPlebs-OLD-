@@ -3,9 +3,9 @@ async function loadContent(page) {
 
     switch (page) {
         case 'home':
-            // Load the index.html for the home page
-            const indexResponse = await fetch('home.html');
-            content = await indexResponse.text();
+            // Load the home.html for the home page
+            const homeResponse = await fetch('home.html');
+            content = await homeResponse.text();
             break;
         case 'news':
             // Load the news.html for the NEWS page
@@ -32,3 +32,8 @@ async function loadContent(page) {
 
     document.getElementById('main-content').innerHTML = content;
 }
+
+// Load 'home.html' initially
+document.addEventListener('DOMContentLoaded', function () {
+    loadContent('home');
+});
