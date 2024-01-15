@@ -3,12 +3,24 @@ async function loadContent(page) {
 
     switch (page) {
         case 'home':
+            // Load the index.html for the home page
+            const indexResponse = await fetch('index.html');
+            content = await indexResponse.text();
+            break;
         case 'news':
+            // Load the news.html for the NEWS page
+            const newsResponse = await fetch('news.html');
+            content = await newsResponse.text();
+            break;
         case 'interviews':
+            // Load the interviews.html for the INTERVIEWS page
+            const interviewsResponse = await fetch('interviews.html');
+            content = await interviewsResponse.text();
+            break;
         case 'events':
-            // Load internal content
-            const response = await fetch(page + '.html');
-            content = await response.text();
+            // Load the events.html for the EVENTS page
+            const eventsResponse = await fetch('events.html');
+            content = await eventsResponse.text();
             break;
         case 'nostr':
             // Redirect to an external link for NOSTR
