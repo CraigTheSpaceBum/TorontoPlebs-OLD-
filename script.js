@@ -54,6 +54,7 @@ async function loadHtmlContent(htmlFile) {
 
 // Initial load
 document.addEventListener('DOMContentLoaded', async () => {
+    nostrDropdownOpen = false; // Ensure the initial state is false
     await loadContent('home');
 });
 
