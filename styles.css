@@ -80,9 +80,11 @@ main {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color:
+    background-color: #192734;
+    /* ... (rest of your dropdown styles) */
+}
 
-        /* button for NOSTR.html */
+/* button for NOSTR.html */
 .button-container {
     display: flex;
     flex-wrap: wrap;
