@@ -14,10 +14,18 @@
         <nav>
             <button onclick="loadContent('home')">HOME</button>
             <button onclick="loadContent('news')">NEWS</button>
-            <button onclick="loadContent('interviews')">INTERVIEWS</button>
-            <button onclick="loadContent('events')">EVENTS</button>
-            <button onclick="loadContent('nostr')">NOSTR</button>
-            <button onclick="loadContent('about')">ABOUT</button>
+            <button onclick="loadContent('shop')">SHOP</button>
+            <div class="dropdown">
+                <button class="dropbtn">NOSTR</button>
+                <div class="dropdown-content">
+                    <button onclick="loadContent('news')">News</button>
+                    <button onclick="loadContent('videos')">Videos</button>
+                    <button onclick="loadContent('interviews')">Interviews</button>
+                    <button onclick="loadContent('whatisnostr')">What Is Nostr?</button>
+                    <button onclick="loadContent('nostraddress')">Nostr Address</button>
+                </div>
+            </div>
+            <button onclick="loadContent('settings')">SETTINGS</button>
         </nav>
     </header>
 
