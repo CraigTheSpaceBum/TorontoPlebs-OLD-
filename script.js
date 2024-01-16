@@ -1,26 +1,3 @@
-let nostrDropdownOpen = false;
-
-function toggleNostrDropdown() {
-    const nostrOverlay = document.getElementById('nostrOverlay');
-    const nostrDropdownBox = document.getElementById('nostrDropdownBox');
-
-    nostrDropdownOpen = !nostrDropdownOpen;
-
-    if (nostrDropdownOpen) {
-        nostrOverlay.style.display = 'flex';
-        nostrDropdownBox.style.display = 'block';
-
-        // Center the dropdown box
-        const windowHeight = window.innerHeight;
-        const boxHeight = nostrDropdownBox.clientHeight;
-        const topOffset = (windowHeight - boxHeight) / 2;
-        nostrDropdownBox.style.top = `${topOffset}px`;
-    } else {
-        nostrOverlay.style.display = 'none';
-        nostrDropdownBox.style.display = 'none';
-    }
-}
-
 async function loadContent(page) {
     let content = '';
 
@@ -28,23 +5,23 @@ async function loadContent(page) {
         case 'home':
             content = await loadHtmlContent('home.html');
             break;
-        case 'about':
-            content = await loadHtmlContent('about.html');
-            break;
         case 'news':
             content = await loadHtmlContent('news.html');
             break;
-        // ... (add other cases as needed)
+        case 'interviews':
+            content = await loadHtmlContent('interviews.html');
+            break;
+        case 'events':
+            content = await loadHtmlContent('events.html');
+            break;
+        case 'nostr':
+            content = await loadHtmlContent('nostr.html');
+            break;
         default:
             content = 'Page not found!';
     }
 
     document.getElementById('main-content').innerHTML = content;
-
-    // Close the Nostr dropdown if it was open
-    if (nostrDropdownOpen) {
-        toggleNostrDropdown();
-    }
 }
 
 async function loadHtmlContent(htmlFile) {
@@ -54,8 +31,7 @@ async function loadHtmlContent(htmlFile) {
 
 // Initial load
 document.addEventListener('DOMContentLoaded', async () => {
-    nostrDropdownOpen = false; // Ensure the initial state is false
-    await loadContent('home'); // Load 'home.html' on initial load
+    await loadContent('home');
 });
 
 // ... (other functions if any)
