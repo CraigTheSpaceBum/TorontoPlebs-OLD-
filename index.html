@@ -15,15 +15,13 @@
             <button onclick="loadContent('home')">HOME</button>
             <button onclick="loadContent('news')">NEWS</button>
             <button onclick="loadContent('shop')">SHOP</button>
-            <div class="dropdown">
-                <button class="dropbtn">NOSTR</button>
-                <div class="dropdown-content">
-                    <button onclick="loadContent('news')">News</button>
-                    <button onclick="loadContent('videos')">Videos</button>
-                    <button onclick="loadContent('interviews')">Interviews</button>
-                    <button onclick="loadContent('whatisnostr')">What Is Nostr?</button>
-                    <button onclick="loadContent('nostraddress')">Nostr Address</button>
-                </div>
+            <button onclick="toggleNostrDropdown()">NOSTR</button>
+            <div id="nostrDropdown" class="dropdown-content">
+                <button onclick="loadContent('news')">News</button>
+                <button onclick="loadContent('videos')">Videos</button>
+                <button onclick="loadContent('interviews')">Interviews</button>
+                <button onclick="loadContent('whatisnostr')">What Is Nostr?</button>
+                <button onclick="loadContent('nostraddress')">Nostr Address</button>
             </div>
             <button onclick="loadContent('settings')">SETTINGS</button>
         </nav>
@@ -32,6 +30,16 @@
     <main id="main-content">
         <!-- Content will be loaded here based on button clicks -->
     </main>
+
+    <div id="nostrOverlay" class="overlay" onclick="toggleNostrDropdown()">
+        <div id="nostrDropdownBox" class="dropdown-content">
+            <button onclick="loadContent('news')">News</button>
+            <button onclick="loadContent('videos')">Videos</button>
+            <button onclick="loadContent('interviews')">Interviews</button>
+            <button onclick="loadContent('whatisnostr')">What Is Nostr?</button>
+            <button onclick="loadContent('nostraddress')">Nostr Address</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
