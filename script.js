@@ -25,7 +25,16 @@ async function loadContent(page) {
     let content = '';
 
     switch (page) {
-        // ... (unchanged content loading logic)
+        case 'home':
+            content = await loadHtmlContent('home.html');
+            break;
+        case 'about':
+            content = await loadHtmlContent('about.html');
+            break;
+        case 'news':
+            content = await loadHtmlContent('news.html');
+            break;
+        // ... (add other cases as needed)
         default:
             content = 'Page not found!';
     }
@@ -38,4 +47,14 @@ async function loadContent(page) {
     }
 }
 
-// ... (unchanged code)
+async function loadHtmlContent(htmlFile) {
+    const response = await fetch(htmlFile);
+    return await response.text();
+}
+
+// Initial load
+document.addEventListener('DOMContentLoaded', async () => {
+    await loadContent('home');
+});
+
+// ... (other functions if any)
