@@ -17,13 +17,12 @@ async function loadContent(page) {
         case 'nostr':
             content = await loadHtmlContent('nostr.html');
             break;
-                    case 'about':
+        case 'about':
             content = await loadHtmlContent('about.html');
             break;
-case 'shop':
-            content = await loadHtmlContent('zap.torontoplebs.ca');
+        case 'shop':
+            window.location.href = 'https://zap.torontoplebs.ca';
             break;
-            
         default:
             content = 'Page not found!';
     }
