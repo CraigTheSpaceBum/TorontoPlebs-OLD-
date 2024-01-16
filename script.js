@@ -17,6 +17,9 @@ async function loadContent(page) {
         case 'nostr':
             content = await loadHtmlContent('nostr.html');
             break;
+                    case 'about':
+            content = await loadHtmlContent('about.html');
+            break;
         default:
             content = 'Page not found!';
     }
