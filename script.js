@@ -7,8 +7,14 @@ function toggleNostrDropdown() {
     nostrDropdownOpen = !nostrDropdownOpen;
 
     if (nostrDropdownOpen) {
-        nostrOverlay.style.display = 'block';
+        nostrOverlay.style.display = 'flex';
         nostrDropdownBox.style.display = 'block';
+
+        // Center the dropdown box
+        const windowHeight = window.innerHeight;
+        const boxHeight = nostrDropdownBox.clientHeight;
+        const topOffset = (windowHeight - boxHeight) / 2;
+        nostrDropdownBox.style.top = `${topOffset}px`;
     } else {
         nostrOverlay.style.display = 'none';
         nostrDropdownBox.style.display = 'none';
