@@ -20,6 +20,10 @@ async function loadContent(page) {
                     case 'about':
             content = await loadHtmlContent('about.html');
             break;
+case 'shop':
+            content = await loadHtmlContent('zap.torontoplebs.ca');
+            break;
+            
         default:
             content = 'Page not found!';
     }
