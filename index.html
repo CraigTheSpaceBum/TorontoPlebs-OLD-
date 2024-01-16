@@ -13,18 +13,9 @@
         <h1>TORONTO PLEBS</h1>
         <nav>
             <button onclick="loadContent('home')">HOME</button>
-              <button onclick="toggleNostrDropdown()">NOSTR</button>
-            <div id="nostrDropdown" class="dropdown-content">
-                <button onclick="loadContent('news')">News</button>
-                <button onclick="loadContent('events')">Events</button>
-                <button onclick="loadContent('videos')">Videos</button>
-                <button onclick="loadContent('interviews')">Interviews</button>
-                <button onclick="loadContent('whatisnostr')">What Is Nostr?</button>
-                <button onclick="loadContent('nostraddress')">Nostr Address</button>
-            </div>
+            <button onclick="loadContent('nostr')">NOSTR</button>
             <button onclick="loadContent('news')">ABOUT</button>
             <button onclick="loadContent('shop')">SHOP</button>
-          
             <button onclick="loadContent('settings')">SETTINGS</button>
         </nav>
     </header>
@@ -32,16 +23,6 @@
     <main id="main-content">
         <!-- Content will be loaded here based on button clicks -->
     </main>
-
-    <div id="nostrOverlay" class="overlay" onclick="toggleNostrDropdown()">
-        <div id="nostrDropdownBox" class="dropdown-content">
-            <button onclick="loadContent('news')">News</button>
-            <button onclick="loadContent('videos')">Videos</button>
-            <button onclick="loadContent('interviews')">Interviews</button>
-            <button onclick="loadContent('whatisnostr')">What Is Nostr?</button>
-            <button onclick="loadContent('nostraddress')">Nostr Address</button>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 </body>
