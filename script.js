@@ -1,3 +1,21 @@
+let nostrDropdownOpen = false;
+
+function toggleNostrDropdown() {
+    const nostrOverlay = document.getElementById('nostrOverlay');
+    const nostrDropdownBox = document.getElementById('nostrDropdownBox');
+
+    nostrDropdownOpen = !nostrDropdownOpen;
+
+    if (nostrDropdownOpen) {
+        nostrOverlay.style.display = 'block';
+        nostrDropdownBox.style.display = 'block';
+        nostrDropdownBox.style.flexDirection = 'column'; // Set the direction to column
+    } else {
+        nostrOverlay.style.display = 'none';
+        nostrDropdownBox.style.display = 'none';
+    }
+}
+
 async function loadContent(page) {
     let content = '';
 
@@ -28,6 +46,11 @@ async function loadContent(page) {
     }
 
     document.getElementById('main-content').innerHTML = content;
+
+    // Close the Nostr dropdown if it was open
+    if (nostrDropdownOpen) {
+        toggleNostrDropdown();
+    }
 }
 
 async function loadHtmlContent(htmlFile) {
@@ -41,4 +64,3 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 // ... (other functions if any)
-
