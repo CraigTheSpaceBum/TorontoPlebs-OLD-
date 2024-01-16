@@ -1,17 +1,3 @@
-let nostrDropdownOpen = false;
-
-function toggleNostrDropdown() {
-    const nostrDropdownBox = document.getElementById('nostrDropdownBox');
-
-    nostrDropdownOpen = !nostrDropdownOpen;
-
-    if (nostrDropdownOpen) {
-        nostrDropdownBox.style.display = 'block';
-    } else {
-        nostrDropdownBox.style.display = 'none';
-    }
-}
-
 async function loadContent(page) {
     let content = '';
 
@@ -31,23 +17,18 @@ async function loadContent(page) {
         case 'nostr':
             content = await loadHtmlContent('nostr.html');
             break;
-        case 'about':
+                    case 'about':
             content = await loadHtmlContent('about.html');
             break;
-        case 'shop':
+case 'shop':
             content = await loadHtmlContent('zap.torontoplebs.ca');
             break;
-
+            
         default:
             content = 'Page not found!';
     }
 
     document.getElementById('main-content').innerHTML = content;
-
-    // Close the Nostr dropdown if it was open
-    if (nostrDropdownOpen) {
-        toggleNostrDropdown();
-    }
 }
 
 async function loadHtmlContent(htmlFile) {
@@ -61,3 +42,4 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 // ... (other functions if any)
+
