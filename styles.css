@@ -63,33 +63,6 @@ main {
     font-size: 1.2rem;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    min-width: 160px;
-    z-index: 1;
-}
-
-.dropdown-content button {
-    color: #fff;
-    padding: 12px 16px;
-    display: block;
-    width: 100%;
-    text-align: left;
-    border: none;
-    background: none;
-    cursor: pointer;
-}
-
-.dropdown-content button:hover {
-    background-color: #777;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
 .overlay {
     display: none;
     position: fixed;
@@ -99,4 +72,12 @@ main {
     height: 100%;
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
     z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:
