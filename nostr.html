@@ -9,20 +9,14 @@
 </head>
 
 <body>
-    <nav>
-        <div class="button-row">
-            <button onclick="loadContent('news')">News</button>
-            <button onclick="loadContent('events')">Events</button>
-            <button onclick="loadContent('videos')">Videos</button>
-        </div>
-        <div class="button-row">
-            <button onclick="loadContent('interviews')">Interviews</button>
-            <button onclick="loadContent('whatisnostr')">What Is Nostr?</button>
-            <button onclick="loadContent('nostraddress')">NIP 05 Nostr Address</button>
-        </div>
-        <div class="button-row">
-            <button onclick="loadContent('nostraddress')">Toronto Plebs on NOSTR</button>
-        </div>
+    <nav class="button-container">
+        <button onclick="loadContent('news')">News</button>
+        <button onclick="loadContent('events')">Events</button>
+        <button onclick="loadContent('videos')">Videos</button>
+        <button onclick="loadContent('interviews')">Interviews</button>
+        <button onclick="loadContent('whatisnostr')">What Is Nostr?</button>
+        <button onclick="loadContent('nostraddress')">NIP 05 Nostr Address</button>
+        <button onclick="loadContent('nostraddress')">Toronto Plebs on NOSTR</button>
     </nav>
     <main id="main-content">
         <!-- Content will be loaded here based on button clicks -->
