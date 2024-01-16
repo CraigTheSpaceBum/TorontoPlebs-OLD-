@@ -22,6 +22,11 @@ async function loadContent(page) {
             const eventsResponse = await fetch('events.html');
             content = await eventsResponse.text();
             break;
+        case 'about':
+            // Load the about.html for the ABOUT page
+            const aboutResponse = await fetch('about.html');
+            content = await aboutResponse.text();
+            break;
         case 'nostr':
             // Redirect to an external link for NOSTR
             window.location.href = 'https://njump.me/@torontoplebs.ca';
