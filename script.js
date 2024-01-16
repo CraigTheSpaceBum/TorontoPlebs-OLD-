@@ -39,7 +39,7 @@ async function loadContent(page) {
             content = await loadHtmlContent('about.html');
             break;
         case 'shop':
-            window.location.href = 'https://zap.torontoplebs.ca';
+            content = await loadHtmlContent('shop.html');
             break;
         default:
             content = 'Page not found!';
