@@ -34,6 +34,7 @@ button {
     padding: 15px 20px;
     border: none;
     cursor: pointer;
+    flex: 1;
     font-size: 1.2rem;
 }
 
@@ -79,21 +80,5 @@ main {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #555; /* Change this to desired background color */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
+    background-color:
 
-.dropdown-content button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    text-align: left;
-    color: #fff;
-    border: none;
-    background-color: #555;
-}
-
-.dropdown-content button:hover {
-    background-color: #777;
-}
