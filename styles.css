@@ -70,7 +70,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    background: rgba(0, 0, 0, 0.5);
     z-index: 2;
     display: flex;
     justify-content: center;
@@ -81,7 +81,6 @@ main {
     display: none;
     position: absolute;
     background-color: #192734;
-    /* ... (rest of your dropdown styles) */
 }
 
 /* button for NOSTR.html */
@@ -90,16 +89,16 @@ main {
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 20px;
-    background-color: #253341; /* Set background color for the box */
-    border-radius: 8px; /* Add rounded corners to the box */
-    padding: 15px; /* Add padding inside the box */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a subtle box shadow */
+    background-color: #253341;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .button-container button {
     margin: 10px;
-    background-color: #192734; /* Set background color for the buttons */
-    color: #ffffff; /* Set text color for the buttons */
+    background-color: #192734;
+    color: #fff;
     border: none;
     padding: 15px 20px;
     border-radius: 4px;
@@ -109,5 +108,5 @@ main {
 }
 
 .button-container button:hover {
-    background-color: #253341; /* Change background color on hover */
+    background-color: #253341;
 }
