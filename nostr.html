@@ -1,8 +1,32 @@
-<center></center><button onclick="loadContent('news')">News</button>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOSTR</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>NOSTR</h1>
+        <nav>
+<button onclick="loadContent('news')">News</button>
                 <button onclick="loadContent('events')">Events</button>
                 <button onclick="loadContent('videos')">Videos</button>
                 <button onclick="loadContent('interviews')">Interviews</button>
                 <button onclick="loadContent('whatisnostr')">What Is Nostr?</button>
                 <button onclick="loadContent('nostraddress')">NIP 05 Nostr Address</button>
-                <button onclick="loadContent('https://njump.me/npub1t9zhrugnwhhm4msu7cp0ph00dydp9hhf5q2druu7tyd3lnekjces9tstxq')">Toronto Plebs on NOSTR</button></center>
+                <button onclick="loadContent('nostraddress')">Toronto Plebs on NOSTR</button>
+        </nav>
+    </header>
 
+    <main id="main-content">
+        <!-- Content will be loaded here based on button clicks -->
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
