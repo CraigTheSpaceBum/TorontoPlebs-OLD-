@@ -23,17 +23,14 @@ async function loadContent(page) {
         case 'home':
             content = await loadHtmlContent('home.html');
             break;
-        case 'news':
-            content = await loadHtmlContent('news.html');
-            break;
         case 'interviews':
             content = await loadHtmlContent('interviews.html');
             break;
         case 'events':
             content = await loadHtmlContent('events.html');
             break;
-        case 'nostr':
-            content = await loadHtmlContent('nostr.html');
+        case 'education':
+            content = await loadHtmlContent('education.html');
             break;
         case 'about':
             content = await loadHtmlContent('about.html');
