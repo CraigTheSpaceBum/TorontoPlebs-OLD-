@@ -5,24 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NOSTR</title>
+
+    <style>
+        .button-container {
+            margin-bottom: 10px; /* Add some spacing between button containers */
+        }
+
+        .container-header {
+            font-size: 24px; /* Adjust the font size for headers */
+            font-weight: bold; /* Add bold styling to headers */
+            margin-bottom: 5px; /* Add some spacing below headers */
+        }
+
+        /* Add any other styling you want for the button containers */
+    </style>
+
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <nav class="button-container">
-        <button onclick="loadContent('news')">News</button>
-        <button onclick="loadContent('events')">Events</button>
-        <button onclick="loadContent('videos')">Videos</button>
-        <button onclick="loadContent('interviews')">Interviews</button>
-    </nav>
-<p>
-    <nav class="button-container">
+    <div class="button-container">
+        <h2 class="container-header">BITCOIN</h2>
+        <button onclick="loadContent('bitcoinbasics')">Bitcoin Basics</button>
+        <button onclick="loadContent('gettingstarted')">Getting Started</button>
+        <button onclick="loadContent('miningexplained')">Mining Explained</button>
+        <button onclick="loadContent('securitymeasures')">Security Measures</button>
+        <button onclick="loadContent('transactions')">Transactions and Confirmations</button>
+        <button onclick="loadContent('bitcoineconomy')">Bitcoin and the Economy</button>
+        <button onclick="loadContent('altcoinsandtokens')">Altcoins and Tokens</button>
+        <button onclick="loadContent('regulation')">Regulation and Legalities</button>
+        <button onclick="loadContent('latestnews')">Latest News and Updates</button>
+        <button onclick="loadContent('resources')">Educational Resources</button>
+    </div>
+
+    <div class="button-container">
+        <h2 class="container-header">NOSTR</h2>
         <button onclick="loadContent('whatisnostr')">What Is Nostr?</button>
         <button onclick="loadContent('nostraddress')">NIP 05 Nostr Address</button>
-        <button onclick="loadContent('nostraddress')">Toronto Plebs on NOSTR</button>
-    </nav>
-</p>
+        <button onclick="loadContent('torontoplebs')">Toronto Plebs on NOSTR</button>
+    </div>
+
     <script src="script.js"></script>
 </body>
 
