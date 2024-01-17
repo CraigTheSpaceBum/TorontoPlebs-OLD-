@@ -41,6 +41,10 @@ async function loadContent(page) {
         case 'shop':
             content = await loadHtmlContent('shop.html');
             break;
+        case 'live':
+            content = await loadHtmlContent('zapstream.html');
+            break;
+            
         default:
             content = 'Page not found!';
     }
