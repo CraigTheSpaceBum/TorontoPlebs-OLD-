@@ -86,8 +86,8 @@ main {
 /* button for NOSTR.html */
 .button-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column; /* Adjusted to vertical direction */
+    align-items: center; /* Center items horizontally */
     margin: 20px;
     background-color: #253341;
     border-radius: 8px;
