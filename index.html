@@ -1,30 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Toronto Plebs</title>
+      <link rel="stylesheet" href="styles/index.css" />
+   </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toronto Plebs</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+   <body>
+      <header>
+         <div class="corset">
+            <a href="/" class="tp-logo">
+               <h1>Toronto Plebs</h1>
+               <img class="tp-logo__image" src="images/toronto-plebs-logo_50x50.jpg" alt="Toronto Plebs Logo" />
+            </a>
+            <nav>
+               <a href="index.html">Home</a>
+               <a href="live.html">Live</a>
+               <a href="education.html">Education</a>
+               <a href="about.html">About</a>
+               <a href="shop.html">Shop</a>
+            </nav>
+            <div class="tp-header-links">
+               <div class="tp-nostr">
+                  <a href="https://njump.me/@torontoplebs.ca">Follow on Nostr</a>
+               </div>
+               <div class="tp-zap">
+                  <a href="https://zap.torontoplebs.ca/api/v1/invoices?storeId=3yTdaFGLa4QheQ9JKz7aGZUYUA4oiVxtzyXLvFueh3UR&currency=CAD">Zap Donation</a>
+               </div>
+            </div>
+         </div>
+      </header>
 
-<body>
-    <header>
-        <h1>TORONTO PLEBS</h1>
-        <nav>
-            <button onclick="loadContent('home')">HOME</button>
-            <button onclick="loadContent('live')">LIVE</button>
-            <button onclick="loadContent('education')">EDUCATION</button>
-            <button onclick="loadContent('about')">ABOUT</button>
-              <button onclick="loadContent('shop')">SHOP</button>
-        </nav>
-    </header>
+      <main id="main-content">
 
-    <main id="main-content">
-        <!-- Content will be loaded here based on button clicks -->
-    </main>
 
-    <script src="script.js"></script>
-</body>
+         <div class="corset tp-page tp-page__home">
+            <section class="tp-section tp-intro">
+               <h2>Bitcoin, Nostr and Education</h2>
+            </section>
 
+            <section class="tp-section tp-meetups">
+               <div class="tp-meetups__text">
+                  <h2>Meet Ups!</h2>
+                  <p>Want to know when next Bitcoin or Nostr meet up is in Toronto?</p>
+                  <p class="tp-btn-container"><a href="https://www.meetup.com/the-bitcoin-bay/events/" class="tp-btn">Learn More</a></p>
+               </div>
+               <div class="tp-meetups__image">
+                  <img src="images/meetups.jpg" alt="Photo of one of our meet ups">
+               </div>
+            </section>
+
+            <section class="tp-section tp-image-gallery">
+               <img src="images/meetup01.jpg" alt="Photo of one of our meet ups">
+               <img src="images/meetup02.jpg" alt="Photo of one of our meet ups">
+               <img src="images/bitcoin-in-hand.jpg" alt="One physical Bitcoin in a hand">
+            </section>
+
+            <section class="tp-section tp-affiliations">
+               <h2>Affiliations</h2>
+               <div class="tp-affiliations__container">
+                  <div class="tp-affiliations__item">
+                     <div class="tp-affiliations__image">
+                        <img src="images/bitcoin-bay-logo.png" alt="Bitcoin Bay Logo">
+                     </div>
+                     <div class="tp-affiliations__text">Bitcoin Bay</div>
+                  </div>
+                  <div class="tp-affiliations__item">
+                     <div class="tp-affiliations__image">
+                        <img src="images/bitcoin-toronto-collabarotive.png" alt="Bitcoin Toronto Collaborative Logo">
+                     </div>
+                     <div class="tp-affiliations__text">Bitcoin Toronto Collaborative</div>
+                  </div>
+                  <div class="tp-affiliations__item">
+                     <div class="tp-affiliations__image">
+                        <img src="images/ontario-bitcoiners.png" alt="Ontario Bitcoiners Logo">
+                     </div>
+                     <div class="tp-affiliations__text">Ontario Bitcoiners</div>
+                  </div>
+                  <div class="tp-affiliations__item">
+                     <div class="tp-affiliations__image">
+                        <img src="images/voodoo-logo.jpg" alt="Voodoo Logo">
+                     </div>
+                     <div class="tp-affiliations__text">Voodoo</div>
+                  </div>
+                  <div class="tp-affiliations__item">
+                     <div class="tp-affiliations__image">
+                        <img src="images/comming-soon.jpg" alt="Comming Soon">
+                     </div>
+                     <div class="tp-affiliations__text">Comming soon</div>
+                  </div>
+                  <div class="tp-affiliations__item">
+                     <div class="tp-affiliations__image">
+                        <img src="images/become-affiliate.jpg" alt="Become an Affiliate">
+                     </div>
+                     <div class="tp-affiliations__text">Become an Affiliate</div>
+                  </div>
+               </div>
+            </section>
+         </div>
+
+
+      </main>
+
+      <footer>
+         <div class="corset">
+            <div class="tp-copyright">&#169; Toronto Plebs 2024</div>
+            <div class="tp-sig">Coded by <a href="https://mslmdvlpmnt.com" target="_blank">[ mslm dvlpmnt ]</a></div>
+         </div>
+      </footer>
+   </body>
 </html>
