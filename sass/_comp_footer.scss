@@ -1,0 +1,26 @@
+// @section    Footer
+
+footer {
+   color: $color6;
+   background-color: $color3;
+   border-top: 1px solid #000;
+
+   .corset {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 1rem 0;
+   }
+}
+
+.tp-sig {
+   font-size: 1rem;
+   text-align: right;
+
+   a {
+      color: $color6;
+
+      &:hover, &:active, &:focus {
+         color: #fff;
+      }
+   }
+}

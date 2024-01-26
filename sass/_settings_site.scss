@@ -1,0 +1,55 @@
+// @section    This is the main configuration file for other SASS files
+//
+// @notes
+
+// @section    Page variables
+
+.corset {
+   margin: 0 auto;
+}
+img {
+   max-width: 100%;
+}
+
+// @section                  Break points
+
+body::after {
+   display: none;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+   body::after {
+      content: "b320a768";
+   }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+   body::after {
+      content: "b768a1024";
+   }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+   body::after {
+      content: "b1024a1280";
+   }
+}
+
+@media (min-width: 1280px) and (max-width: 1480px) {
+   body::after {
+      content: "b1280a1480";
+   }
+}
+
+@media (min-width: 1480px) {
+   body::after {
+      content: "gt1480";
+   }
+}
+
+// @section    Gaps (margin or padding)
+
+$gap1: .5rem;
+$gap2: 1.5*$gap1;
+$gap3: 2*$gap1;
+$gap4: 4*$gap1;

@@ -1,0 +1,158 @@
+/***
+ *
+ * Touch Side Swipe (TSS) at mobile resolution
+ *
+***/
+
+$mobileMinRes: 320px;
+$mobileMaxRes: 4096px;
+
+@media (min-width: $mobileMinRes) and (max-width: $mobileMaxRes) {
+
+   // wrapper
+   .tss {
+      z-index: 9999;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      will-change: transform;
+      transition-property: transform;
+      transition-timing-function: ease;
+   }
+
+   .tss-wrap {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+   }
+
+   // Hamburger Icon
+   .tss-hamburger {
+      z-index: 99999;
+      position: absolute;
+      top: 20px;
+      right: -55px;
+      width: 40px;
+      height: 34px;
+      display: block;
+      cursor: pointer;
+
+      @media (min-width: 768px) {
+         top: 35px;
+         right: -60px;
+      }
+   }
+
+   .tss-hamburger__inner {
+      position: relative;
+      left: 4px;
+      display: block;
+      box-sizing: border-box;
+      transition: transform .3s ease;
+
+      &:after,
+      &:before {
+         content: '';
+         pointer-events: none;
+         transition: transform .3s ease;
+      }
+   }
+
+   // Hamburger icon when sidebar is closed
+   .tss--close {
+      .tss-hamburger__inner {
+         width: 30px;
+         height: 3px;
+         border-radius: 3px;
+         //box-shadow: inset 0 0 0 32px, 0 -8px, 0 8px;
+
+         &:after {
+            position: absolute;
+            transform: translateY(4px);
+            width: 30px;
+            height: 3px;
+            border-radius: 3px;
+            box-shadow: inset 0 0 0 32px, 0 -8px, 0 8px;
+            top: 10px;
+            left: 0;
+         }
+
+      }
+   }
+
+   // Hamburger icon when sidebar is open
+   .tss--open {
+      .tss-hamburger__inner {
+         padding: 0;
+         width: 30px;
+         height: 30px;
+         margin: 4px;
+         border-radius: 4px;
+         transform: rotate(45deg);
+
+         &:after,
+         &:before {
+            position: absolute;
+            left: 35%;
+            top: 52%;
+            transform: translate(-50%, -50%);
+            box-shadow: inset 0 0 0 32px;
+         }
+         &:before {
+            width: 30px;
+            height: 4px;
+            border-radius: 4px;
+         }
+
+         &:after {
+            width: 4px;
+            border-radius: 4px;
+            height: 30px;
+         }
+
+      }
+   }
+
+   // Main Navigation Bar
+   .tss-bar {
+      display: none;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      padding: 0;
+
+      .tss & {
+         display: block;
+         overflow-y: overlay;
+      }
+   }
+
+   // dark overlay
+   .tss-bg {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      will-change: opacity;
+      transition-property: opacity;
+      transition-timing-function: ease;
+   }
+}
+
+/***
+ *
+ * Touch Side Swipe (TSS) at desktop resolution
+ *
+***/
+
+@media (min-width: $mobileMaxRes) {
+   .tss-bar {
+      display: none;
+   }
+}

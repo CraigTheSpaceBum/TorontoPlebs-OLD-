@@ -1,0 +1,60 @@
+// @section    Main Layout
+
+body {
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: auto 1fr auto;
+   grid-template-areas:
+      'header'
+      'main'
+      'footer';
+   align-items: start;
+   //width: 100vw;
+   height: 100vh;
+   color: $color7;
+   background-color: $color2;
+}
+
+header {
+   grid-area: header;
+}
+
+main {
+   grid-area: main;
+   align-self: start;
+   justify-self: center;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+
+   section {
+      width: auto;
+   }
+}
+
+footer {
+   grid-area: footer;
+}
+
+.corset {
+   width: auto;
+
+   &.tp-page {
+      padding: 0 1.5rem;
+
+      @media (min-width: 1024px) {
+         width: 1024px;
+         padding: 0;
+      }
+
+   }
+
+   @media (min-width: 1024px) {
+      width: 1024px;
+   }
+
+   img, svg {
+      max-width: 100%;
+   }
+}
+

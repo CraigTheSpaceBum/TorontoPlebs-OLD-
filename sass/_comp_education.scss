@@ -1,0 +1,46 @@
+.tp-education-topic {
+   display: grid;
+   grid-template-rows: repeat(4, 1fr);
+   grid-template-columns: 1fr;
+   grid-row-gap: 3rem;
+   margin-top: 3rem;
+
+   @media (min-width: 1024px) {
+      grid-template-rows: 1fr;
+      grid-template-columns: repeat(4, 1fr);
+      grid-row-gap: 0;
+      grid-column-gap: 1rem;
+   }
+
+}
+.tp-education-topic__item {
+   padding: 3rem 0;
+   background-color: $color1;
+   border-radius: 10px;
+
+   @media (min-width: 1024px) {
+      padding: 2rem 0;
+   }
+
+   span {
+      display: block;
+   }
+
+}
+.tp-education-topic__icon {
+   text-align: center;
+}
+.tp-education-topic__text {
+   font-size: 2rem;
+   text-align: center;
+}
+.tp-howtos {
+   list-style-type: none;
+   padding: 0;
+}
+.tp-howtos__item {
+   padding: 1rem 0;
+}
+.tp-howtos__subtitle {
+   margin: 0;
+}
